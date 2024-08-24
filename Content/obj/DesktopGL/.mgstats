@@ -1,0 +1,17 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/home/kai/Projects/Beri00-1/Content/beri_hazard_spritesheet32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/beri_hazard_spritesheet32x32.xnb","TextureProcessor","Texture2DContent",270,8277,0.2832283
+"/home/kai/Projects/Beri00-1/Content/beri_ocean00.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/beri_ocean00.xnb","TextureProcessor","Texture2DContent",2683,518485,0.0474015
+"/home/kai/Projects/Beri00-1/Content/beri_ocean01.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/beri_ocean01.xnb","TextureProcessor","Texture2DContent",2904,518485,0.0365482
+"/home/kai/Projects/Beri00-1/Content/beri_palm08.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/beri_palm08.xnb","TextureProcessor","Texture2DContent",579,8277,0.0031624
+"/home/kai/Projects/Beri00-1/Content/beri_spritesheet_32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/beri_spritesheet_32x32.xnb","TextureProcessor","Texture2DContent",5153,122965,0.0085457
+"/home/kai/Projects/Beri00-1/Content/bg_test_desert00.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/bg_test_desert00.xnb","TextureProcessor","Texture2DContent",2593,518485,0.0334494
+"/home/kai/Projects/Beri00-1/Content/bg_test_desert01.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/bg_test_desert01.xnb","TextureProcessor","Texture2DContent",1574,518485,0.0361894
+"/home/kai/Projects/Beri00-1/Content/bg_tileset00.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/bg_tileset00.xnb","TextureProcessor","Texture2DContent",689,65621,0.0065376
+"/home/kai/Projects/Beri00-1/Content/blank_pixels.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/blank_pixels.xnb","TextureProcessor","Texture2DContent",210,213,0.0030452
+"/home/kai/Projects/Beri00-1/Content/can_enemy_spritesheet32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/can_enemy_spritesheet32x32.xnb","TextureProcessor","Texture2DContent",1066,28757,0.0058515
+"/home/kai/Projects/Beri00-1/Content/debugFont.spritefont","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/debugFont.xnb","FontDescriptionProcessor","SpriteFontContent",2011,13343,0.4984564
+"/home/kai/Projects/Beri00-1/Content/door0032x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/door0032x32.xnb","TextureProcessor","Texture2DContent",315,4181,0.0014927
+"/home/kai/Projects/Beri00-1/Content/fblock_sheet_32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/fblock_sheet_32x32.xnb","TextureProcessor","Texture2DContent",1471,82005,0.0085202
+"/home/kai/Projects/Beri00-1/Content/tileset00_32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/tileset00_32x32.xnb","TextureProcessor","Texture2DContent",3474,163925,0.0283934
+"/home/kai/Projects/Beri00-1/Content/tileset01_32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/tileset01_32x32.xnb","TextureProcessor","Texture2DContent",1739,65621,0.005305
+"/home/kai/Projects/Beri00-1/Content/tileset03_32x32.png","/home/kai/Projects/Beri00-1/Content/bin/DesktopGL/tileset03_32x32.xnb","TextureProcessor","Texture2DContent",1561,65621,0.0055356

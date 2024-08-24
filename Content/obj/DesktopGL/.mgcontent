@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/kai/Projects/Beri00-1/Content/beri_hazard_spritesheet32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/beri_ocean00.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/beri_ocean01.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/beri_palm08.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/beri_spritesheet_32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/bg_test_desert00.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/bg_test_desert01.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/bg_tileset00.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/blank_pixels.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/can_enemy_spritesheet32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/debugFont.spritefont</File>
+    <File>/home/kai/Projects/Beri00-1/Content/door0032x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/fblock_sheet_32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/tileset00_32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/tileset01_32x32.png</File>
+    <File>/home/kai/Projects/Beri00-1/Content/tileset03_32x32.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
