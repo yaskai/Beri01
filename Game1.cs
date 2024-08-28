@@ -53,7 +53,7 @@ namespace Beri00
         public State _state = State.Title;
 
         public bool debugView = false;
-        private bool scanLines = true;
+        private bool scanLines = false;
 
         public SpriteFont debugFont;
 
