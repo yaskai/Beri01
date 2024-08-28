@@ -41,7 +41,7 @@ namespace Beri00
         {
             foreach (Entities.Player p in players) p.FixedUpdate();
             foreach (Entities.Enemy e in enemies) e.FixedUpdate();
-            foreach (Entities.Platform plt in platforms) plt.FixedUpdate();
+            foreach (Entities.Platform plt in platforms) plt.FixedUpdate(); 
             foreach (Entities.Hazard h in hazards) h.FixedUpdate();
             RemoveEntities();
         }

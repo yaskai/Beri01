@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/kai/Documents/Beri00/Content/bg_test_desert01.png</SourceFile>
-  <SourceTime>2024-07-21T03:33:16+00:00</SourceTime>
-  <DestFile>/home/kai/Documents/Beri00/Content/bin/DesktopGL/Content/bg_test_desert01.xnb</DestFile>
-  <DestTime>2024-08-24T02:58:09.8182885+00:00</DestTime>
+  <SourceFile>/home/kai/Documents/Beri01/Content/bg_test_desert01.png</SourceFile>
+  <SourceTime>2024-08-24T10:57:22.0101238+00:00</SourceTime>
+  <DestFile>/home/kai/Documents/Beri01/Content/bin/DesktopGL/Content/bg_test_desert01.xnb</DestFile>
+  <DestTime>2024-08-24T10:57:50.4768261+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T11:44:56+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

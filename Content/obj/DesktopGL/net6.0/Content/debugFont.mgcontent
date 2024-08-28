@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/kai/Documents/Beri00/Content/debugFont.spritefont</SourceFile>
-  <SourceTime>2024-07-24T07:44:48+00:00</SourceTime>
-  <DestFile>/home/kai/Documents/Beri00/Content/bin/DesktopGL/Content/debugFont.xnb</DestFile>
-  <DestTime>2024-08-24T02:58:09.9302914+00:00</DestTime>
+  <SourceFile>/home/kai/Documents/Beri01/Content/debugFont.spritefont</SourceFile>
+  <SourceTime>2024-08-24T10:57:22.017124+00:00</SourceTime>
+  <DestFile>/home/kai/Documents/Beri01/Content/bin/DesktopGL/Content/debugFont.xnb</DestFile>
+  <DestTime>2024-08-24T10:57:50.5658282+00:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T11:44:56+00:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

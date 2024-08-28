@@ -108,7 +108,7 @@ namespace Beri00
             //GenerateMap(maps[0]);
             //System.Diagnostics.Debug.WriteLine("tilemap loaded");
 
-            StreamReader reader = new StreamReader("maps/testLevel01.txt");
+            StreamReader reader = new StreamReader("maps/testLevel00.txt");
 
             string lvlWidth = reader.ReadLine();
             string lvlHeight = reader.ReadLine();

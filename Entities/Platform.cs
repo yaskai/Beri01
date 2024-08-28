@@ -124,7 +124,7 @@ namespace Beri00.Entities
                         Reset();
                     }
                 }
-                else breakTimer = 7200;
+                else breakTimer = 72000;
             }
         }
 

@@ -4,22 +4,22 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/home/kai/Documents/Beri00/Content/beri_hazard_spritesheet32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/beri_ocean00.png</File>
-    <File>/home/kai/Documents/Beri00/Content/beri_ocean01.png</File>
-    <File>/home/kai/Documents/Beri00/Content/beri_palm08.png</File>
-    <File>/home/kai/Documents/Beri00/Content/beri_spritesheet_32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/bg_test_desert00.png</File>
-    <File>/home/kai/Documents/Beri00/Content/bg_test_desert01.png</File>
-    <File>/home/kai/Documents/Beri00/Content/bg_tileset00.png</File>
-    <File>/home/kai/Documents/Beri00/Content/blank_pixels.png</File>
-    <File>/home/kai/Documents/Beri00/Content/can_enemy_spritesheet32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/debugFont.spritefont</File>
-    <File>/home/kai/Documents/Beri00/Content/door0032x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/fblock_sheet_32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/tileset00_32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/tileset01_32x32.png</File>
-    <File>/home/kai/Documents/Beri00/Content/tileset03_32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/beri_hazard_spritesheet32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/beri_ocean00.png</File>
+    <File>/home/kai/Documents/Beri01/Content/beri_ocean01.png</File>
+    <File>/home/kai/Documents/Beri01/Content/beri_palm08.png</File>
+    <File>/home/kai/Documents/Beri01/Content/beri_spritesheet_32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/bg_test_desert00.png</File>
+    <File>/home/kai/Documents/Beri01/Content/bg_test_desert01.png</File>
+    <File>/home/kai/Documents/Beri01/Content/bg_tileset00.png</File>
+    <File>/home/kai/Documents/Beri01/Content/blank_pixels.png</File>
+    <File>/home/kai/Documents/Beri01/Content/can_enemy_spritesheet32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/debugFont.spritefont</File>
+    <File>/home/kai/Documents/Beri01/Content/door0032x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/fblock_sheet_32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/tileset00_32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/tileset01_32x32.png</File>
+    <File>/home/kai/Documents/Beri01/Content/tileset03_32x32.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -96,7 +96,7 @@ namespace Beri00.Entities
 
         private double flyTimer = 0;
         //private double flyTimerMax = 115;
-        private double flyTimerMax = 75;
+        private double flyTimerMax = 100; //75;
         private bool flyUsed = false;
         public bool FLY = false;
         private double flyEndTimer = 0;
@@ -820,6 +820,10 @@ namespace Beri00.Entities
                             //velocity.Y -= (float)game.delta * 0.25f;
                             //if (velocity.Y < 0f) velocity.Y = 0f;
                             if (flyTimer > 0 && flyTimer < flyTimerMax - 1) velocity.Y = 0f;
+                            /*
+                            if (flyTimer > 15 && flyTimer < flyTimerMax - 1) velocity.Y = 0f;
+                            if (flyTimer <= 15) gravity = 0.25f;
+                            */
                             FLY = true;
                         }
                     }

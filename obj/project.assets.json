@@ -107,11 +107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kai/Documents/Beri00/Beri00.csproj",
+      "projectUniqueName": "/home/kai/Documents/Beri01/Beri00.csproj",
       "projectName": "Beri00",
-      "projectPath": "/home/kai/Documents/Beri00/Beri00.csproj",
+      "projectPath": "/home/kai/Documents/Beri01/Beri00.csproj",
       "packagesPath": "/home/kai/.nuget/packages/",
-      "outputPath": "/home/kai/Documents/Beri00/obj/",
+      "outputPath": "/home/kai/Documents/Beri01/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kai/.nuget/NuGet/NuGet.Config"
@@ -160,7 +160,15 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
             "version": "[6.0.32, 6.0.32]"
           }
         ],

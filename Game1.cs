@@ -53,7 +53,7 @@ namespace Beri00
         public State _state = State.Title;
 
         public bool debugView = false;
-        private bool scanLines = false;
+        private bool scanLines = true;
 
         public SpriteFont debugFont;
 
@@ -111,7 +111,7 @@ namespace Beri00
             //TargetElapsedTime = TimeSpan.FromTicks((long)1000.0f / 60);
             this._graphics.SynchronizeWithVerticalRetrace = false;
 
-            _graphics.IsFullScreen = true;
+            _graphics.IsFullScreen = false;
             Window.IsBorderless = true;
 
             _graphics.PreferredBackBufferWidth = actualWidth;
