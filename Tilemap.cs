@@ -12,7 +12,7 @@ namespace Beri00
 {
     public class Tilemap
     {
-        private Game1 game;
+        public Game1 game;
         private Handler handler;
         private Spritesheet ss;
 
@@ -66,11 +66,18 @@ namespace Beri00
             Island
         };
         private adjacency[,] adjacencies = new adjacency[mapWidth, mapHeight];
+        /*
         public int[] slope_heightmap_2 = new int[32];
         public int[] slope_heightmap_3 = new int[32];
         public int[] slope_heightmap_4 = new int[32];
         public int[] slope_heightmap_5 = new int[32]; 
-
+        */
+        
+        public int[] slope_heightmap_2 = new int[64];
+        public int[] slope_heightmap_3 = new int[64];
+        public int[] slope_heightmap_4 = new int[64];
+        public int[] slope_heightmap_5 = new int[64]; 
+        
         public Tilemap(Game1 game, Handler handler, Spritesheet ss)
         {
             this.game = game;
@@ -93,11 +100,24 @@ namespace Beri00
 
         private void Init()
         {
-            slope_heightmap_2 = InitSlopeArray(4, 27, -1);
-            slope_heightmap_3 = InitSlopeArray(4, 13, -1);
-            slope_heightmap_4 = InitSlopeArray(4, 32, 1);
-            slope_heightmap_5 = InitSlopeArray(4, 16, 1);
-
+            /*
+            slope_heightmap_2 = InitSlopeArray(4, 27, 32, -1);
+            slope_heightmap_3 = InitSlopeArray(4, 13, 32, -1);
+            slope_heightmap_4 = InitSlopeArray(4, 32, 32,  1);
+            slope_heightmap_5 = InitSlopeArray(4, 16, 32,  1);
+            */
+            
+            slope_heightmap_2 = InitSlopeArray(4, 32, 64, -1);
+            slope_heightmap_3 = InitSlopeArray(4,  0, 64, -1);
+            slope_heightmap_4 = InitSlopeArray(4,  0, 64,  1);
+            slope_heightmap_5 = InitSlopeArray(4, 30, 64,  1);
+            
+            /*
+            slope_heightmap_2 = InitSlopeArray(4, 28, 32, -1);
+            slope_heightmap_3 = InitSlopeArray(4, 18, 32, -1);
+            slope_heightmap_4 = InitSlopeArray(4, 32, 32,  1);
+            slope_heightmap_5 = InitSlopeArray(4, 32, 32,  1);
+            */
             Debug.WriteLine("*********************************************************");
             for (int x = 0; x < 32; x ++) Debug.Write("[" + slope_heightmap_2[x] + "]");
         }
@@ -874,7 +894,7 @@ namespace Beri00
 
             Vector2 ss_coords = new Vector2(0, 0);
             graphicsMap[x, y] = ss_coords;
-            Entities.Tile tile = new Entities.Tile(pos, new Vector2(x, y), ss_coords, game.tile_spritesheet, false);
+            Entities.Tile tile = new Entities.Tile(pos, new Vector2(x, y), ss_coords, game.tile_spritesheet, false, this);
             handler.tiles.Add(tile);
             tileList[x, y] = tile;
         }
@@ -909,7 +929,7 @@ namespace Beri00
             }
 
             graphicsMap[x, y] = ss_coords;
-            Entities.Tile tile = new Entities.Tile(pos, new Vector2(x, y), ss_coords, game.tile_spritesheet, true);
+            Entities.Tile tile = new Entities.Tile(pos, new Vector2(x, y), ss_coords, game.tile_spritesheet, true, this);
             handler.tiles.Add(tile);
             tileList[x, y] = tile;
         }
@@ -997,6 +1017,7 @@ namespace Beri00
                         1);
                         */
                         tileList[c, r].Draw(_spriteBatch);
+                        //tileList[c, r].DrawColliders(_spriteBatch);
                         break;
                         /*
                         case '2':
@@ -1266,13 +1287,13 @@ namespace Beri00
             return t;
         }
 
-        public int[] InitSlopeArray(int step_w, int bot, int slope)
+        public int[] InitSlopeArray(int step_w, int start, int length, int slope)
         {
-            int[] new_array = new int[32];
+            int[] new_array = new int[length];
             int step = 0;
-            int y = bot;
+            int y = start;
 
-            for (int x = 0; x < 32; x++)
+            for (int x = 0; x < length; x++)
             {
                 //y += 2 * slope;
                 if (step == step_w)
@@ -1285,23 +1306,6 @@ namespace Beri00
                 step++;
             }
             return new_array;
-            
-            /*
-            int[] new_array = new int[32];
-
-            int y = bot;
-            for(int s = 0; s < 32 / step_w; s++)
-            {
-                for (int x = s * step_w; x < step_w; s++)
-                {
-                    new_array[x] = y;
-                }
-
-                y += 2 * slope;
-            }
-
-            return new_array;     
-            */       
         }
     }
 }

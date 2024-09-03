@@ -411,6 +411,8 @@ namespace Beri00.Entities
 
         private void Collision()
         {
+            bool collideSolids = true;
+
             onGround = false;
             onWallLft = false;
             onWallRgt = false;
@@ -481,35 +483,91 @@ namespace Beri00.Entities
                 }
             }
             */
+
+            
+            int sl2C = 0;
+            int sl2R = 0;
+
+            int sl3C = 0;
+            int sl3R = 0;
+
+            int sl4C = 0;
+            int sl4R = 0;
+
+            int sl5C = 0;
+            int sl5R = 0;
+
+            Rectangle slope2;
+            Rectangle slope3;
+            Rectangle slope4;
+            Rectangle slope5;
+
+            slope2 = Rectangle.Empty;
+            slope3 = Rectangle.Empty;
+            slope4 = Rectangle.Empty;
+            slope5 = Rectangle.Empty;
+            
+
             for (int r = ftop; r < fbot; r++)
             {
                 for (int c = flft; c < frgt; c++)
                 {
                     switch (tilemap.mapData[c, r])
                     {
+                        /*
                         case '2': case '3': case '4': case '5':
                         SlopeCollision(c, r);
                         onSlope = true;
+                        collideSolids = false;
+                        break;
+                        */
+                        
+                        case '2':
+                        sl2C = c;
+                        sl2R = r;
+                        slope2 = new Rectangle(c * 32, r * 32, 32, 32);
                         break;
 
-                        case '1':
-                        Tile t = tilemap.tileList[c, r];
-                        Rectangle tilebox = new Rectangle((int)t.position.X, (int)t.position.Y, 32, 32);
+                        case '3':
+                        sl3C = c;
+                        sl3R = r;
+                        slope3 = new Rectangle(c * 32, r * 32, 32, 32);
+                        break;
+
+                        case '4':
+                        sl4C = c;
+                        sl4R = r;
+                        slope4 = new Rectangle(c * 32, r * 32, 32, 32);
+                        break;
+
+                        case '5':
+                        sl5C = c;
+                        sl5R = r;
+                        slope5 = new Rectangle(c * 32, r * 32, 32, 32);
+                        break;
                         
-                        //if (lft.Intersects(tilebox)) onWallLft = true; else if (rgt.Intersects(tilebox)) onWallRgt = true;
-                        if (bot.Intersects(tilebox) && !onSlope)
+                        case '1':
+                        if (collideSolids)
                         {
-                            lastGroundPosition.X = position.X;
-                            lastGroundPosition.Y = t.position.Y - 32;
+                            Tile t = tilemap.tileList[c, r];
+                            Rectangle tilebox = new Rectangle((int)t.position.X, (int)t.position.Y, 32, 32);
+                        
+                            //if (lft.Intersects(tilebox)) onWallLft = true; else if (rgt.Intersects(tilebox)) onWallRgt = true;
+                            if (bot.Intersects(tilebox))
+                            {
+                                lastGroundPosition.X = position.X;
+                                lastGroundPosition.Y = t.position.Y - 32;
                             
-                            onGround = true;
-                            float dif = (position.Y + 32) - t.position.Y;
-                            position.Y -= dif;
-                            velocity.Y = 0;
+                                onGround = true;
+                                float dif = (position.Y + 32) - t.position.Y;
+                                position.Y -= dif;
+                                velocity.Y = 0;
                             
-                            //position.Y = t.position.Y - 32;
-                            //velocity.Y = 0;
+                                //position.Y = t.position.Y - 32;
+                                //velocity.Y = 0;
+                            }
                         }
+
                         break;
 
                         case '^':
@@ -558,6 +616,29 @@ namespace Beri00.Entities
 
             // slope check
             
+            if (this.bounds.Intersects(slope2))
+            {
+                onSlope = true;
+                SlopeCollision(sl2C, sl2R);
+            }
+
+            if (this.bounds.Intersects(slope3))
+            {
+                onSlope = true;
+                SlopeCollision(sl3C, sl3R);
+            }
+            
+            if  (this.bounds.Intersects(slope4))
+            {
+                onSlope = true;
+                SlopeCollision(sl4C, sl4R);
+            }
+
+            if (this.bounds.Intersects(slope5))
+            {
+                onSlope = true;
+                SlopeCollision(sl5C, sl5R);
+            }
             
             if (enemyCollisionTimer <= 0) EnemyCollision();
         }
@@ -682,6 +763,14 @@ namespace Beri00.Entities
 
             if (kb.IsKeyDown(Keys.Space)) jumpReleaseTimer = 2;
             if (animState == State.fly && kb.IsKeyUp(Keys.Space)) animState = State.fall;
+
+            if (onDoor)
+            {
+                if (kb.IsKeyDown(Keys.W))
+                {
+                    Die();
+                }
+            }
         }
 
         private void ControllerInput(GamePadState padState, KeyboardState kb)
@@ -1020,12 +1109,12 @@ namespace Beri00.Entities
             }
 
             Tile t = tilemap.tileList[c, r];
-            int relativeX = (int)(position.X + 32 - t.position.X);
+            int relativeX = (int)(position.X - t.position.X + 32);
             //int relativeX = (int)(position.X - t.position.X);
 
             //Vector2 point = new Vector2(position.X + 31, position.Y + 31);
 
-            if (relativeX < 0) relativeX = 0; else if (relativeX > 31) relativeX = 31;
+            if (relativeX < 1) relativeX = 1; else if (relativeX > 31) relativeX = 31;
 
             if (relativeX >= 0 && relativeX < 32)
             {

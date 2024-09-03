@@ -53,7 +53,7 @@ namespace Beri00
         public State _state = State.Title;
 
         public bool debugView = false;
-        private bool scanLines = false;
+        private bool scanLines = true;
 
         public SpriteFont debugFont;
 
@@ -328,7 +328,7 @@ namespace Beri00
                 tilemap.DrawBgTiles(_spriteBatch);
                 _spriteBatch.End();
 
-                _spriteBatch.Begin(SpriteSortMode.Texture, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, camera.transform);
+                _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, camera.transform);
                 tilemap.Draw(_spriteBatch);
                 _spriteBatch.End();
             }
@@ -354,11 +354,11 @@ namespace Beri00
             if (scanLines) DrawCRT(_spriteBatch);
 
             // draw without camera transformations
-            /*
-            _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Opaque, SamplerState.PointClamp, null, null, null, null);
-            _spriteBatch.DrawString(debugFont, "FPS: " + fps, new Vector2(32, 32), Color.White, 0, Vector2.Zero, new Vector2(3, 3), SpriteEffects.None, 1);
-            _spriteBatch.End();
-            */
+            
+            //_spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Opaque, SamplerState.PointClamp, null, null, null, null);
+            //_spriteBatch.DrawString(debugFont, "FPS: " + fps, new Vector2(32, 32), Color.White, 0, Vector2.Zero, new Vector2(3, 3), SpriteEffects.None, 1);
+            //_spriteBatch.End();
+            
             
             if (debugView)
             {
@@ -373,11 +373,13 @@ namespace Beri00
             }
             else
             {
+                
                 _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, null);
                 _spriteBatch.Draw(blank_spritesheet.frames[0, 0], new Rectangle(24, 32, 140, 32), Color.White * 0.5f);
                 _spriteBatch.DrawString(debugFont, "FPS:" + Math.Truncate(displayFps), new Vector2(32, 32), Color.White, 0, Vector2.Zero, new Vector2(2, 2), SpriteEffects.None, 1);
                 //_spriteBatch.DrawString(debugFont, "delta: " + delta * 100, new Vector2(32, 64), Color.White, 0, Vector2.Zero, new Vector2(3, 3), SpriteEffects.None, 1);
                 _spriteBatch.End();
+                
             }
             
             /*
@@ -425,7 +427,8 @@ namespace Beri00
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, camera.scale);
             for (int i = 0; i < virtualHeight / 3; i++)
             {
-                _spriteBatch.Draw(blank_spritesheet.blank, new Rectangle(0, i * 3, virtualWidth, 2), Color.Black * 0.1f);
+                _spriteBatch.Draw(blank_spritesheet.blank, new Rectangle(0, i * 4, virtualWidth, 2), Color.Black * 0.065f);
+                _spriteBatch.Draw(blank_spritesheet.frames[13, 0], new Rectangle(0, (i * 4) + 1, virtualWidth, 1), Color.White * 0.065f);
             }
             _spriteBatch.End();
         }

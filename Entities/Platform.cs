@@ -46,7 +46,7 @@ namespace Beri00.Entities
 
         public void Update(GameTime gameTime)
         {
-            if (break_anim.frame < 1) break_anim.speed = 24; else break_anim.speed = 7;
+            if (break_anim.frame < 1) break_anim.speed = 64; else break_anim.speed = 7;
 
             if (break_anim.loops > 0 || break_anim.f > 18)
             {
@@ -96,6 +96,7 @@ namespace Beri00.Entities
                     if (break_anim.f < 4)
                     {
                         int range = 1;
+
                         drawOffset.X = rand.Next(-range, range);
                         drawOffset.Y = rand.Next(-range, range);
                     }
